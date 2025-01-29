@@ -126,9 +126,12 @@ footer .section-2 {
   padding: 30px 0;
 }
 
-.section-2 .col-2 img{
-  width: 120%;
-  min-height: 120%;
+.section-2 .col-2{
+  background-image: url('./img/dc-logo-bg.png');
+  width: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .section-2 .row {
@@ -154,7 +157,7 @@ footer .section-2 {
 
 .section-3{
   background-color: #303030;
-  min-height: 100%;
+  padding: 20px;
   z-index: 1000;
   position: sticky;
 }

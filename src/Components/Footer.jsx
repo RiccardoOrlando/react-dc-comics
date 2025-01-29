@@ -128,7 +128,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="col-2">
-              <img src="./img/dc-logo-bg.png" alt="" />
+              
             </div>
             </div>
         </div>
