@@ -1,4 +1,44 @@
 export default function Footer() {
+    // Array navigazione principale
+    const navLinks = [
+        { text: 'Characters', path: '/characters' },
+        { text: 'Comics', path: '/comics' },
+        { text: 'Movies', path: '/movies' },
+        { text: 'Tv', path: '/tv' },
+        { text: 'Games', path: '/games' },
+        { text: 'Videos', path: '/videos' },
+        { text: 'News', path: '/news' }
+      ];
+
+    // Array navigazione shop
+  const shopNavLinks = [
+    { text: 'Shop DC', path: '/shop' },
+    { text: 'Shop DC Collectibles', path: '/collectibles' }
+  ];
+
+  // Array navigazione footer
+  const footerLinks = [
+    { text: 'Terms Of Use', path: '/terms' },
+    { text: 'Privacy Policy (New)', path: '/privacy',},
+    { text: 'Ad Choices', path: '/ad-choices' },
+    { text: 'Advertising', path: '/advertising' },
+    { text: 'Jobs', path: '/jobs' },
+    { text: 'Subscriptions', path: '/subscriptions' },
+    { text: 'Talent Workshops', path: '/talent' },
+    { text: 'CPSC Certificates', path: '/certificates' },
+    { text: 'Ratings', path: '/ratings' },
+    { text: 'Shop Help', path: '/help' },
+    { text: 'Contact Us', path: '/contact' }
+  ];
+
+  const dcLinks = [
+    { text: 'DC', path: '/dc' },
+    { text: 'MAD Magazine', path: '/mad-magazine' },
+    { text: 'DC Kids', path: '/dc-kids' },
+    { text: 'DC Universe', path: '/dc-universe' },
+    { text: 'DC Power Visa', path: '/dc-power-visa' }
+  ];
+
   return (
     <footer>
       <div className="section-1">
@@ -36,94 +76,39 @@ export default function Footer() {
                 <div className="col-A">
                     <h3>DC COMICS</h3>
                     <ul>
-                        <li>
-                            <a href="#">Characters</a>
-                        </li>
-                        <li>
-                            <a href="#">Comics</a>
-                        </li>
-                        <li>
-                            <a href="#">Movies</a>
-                        </li>
-                        <li>
-                            <a href="#">Tv</a>
-                        </li>
-                        <li>
-                            <a href="#">Games</a>
-                        </li>
-                        <li>
-                            <a href="#">Videos</a>
-                        </li>
-                        <li>
-                            <a href="#">News</a>
-                        </li>
+                        {navLinks.map((Objects, Id) =>(
+                            <li key={Id}>
+                                <a href={Objects.path}>{Objects.text}</a>
+                            </li>
+                        ))}
                     </ul>
                     <h3>SHOP</h3>
                     <ul>
-                        <li>
-                            <a href="#">Shop DC</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop DC Collectbles</a>
-                        </li>
+                        {shopNavLinks.map((Objects, Id) =>(
+                            <li key={Id}>
+                                <a href={Objects.path}>{Objects.text}</a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className="col-B">
                 <h3>DC</h3>
                     <ul>
-                        <li>
-                            <a href="#">Terms Of Use</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy policy (New)</a>
-                        </li>
-                        <li>
-                            <a href="#">Ad Choices</a>
-                        </li>
-                        <li>
-                            <a href="#">Advertising</a>
-                        </li>
-                        <li>
-                            <a href="#">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="#">Subscription</a>
-                        </li>
-                        <li>
-                            <a href="#">Talent Workshops</a>
-                        </li>
-                        <li>
-                            <a href="#">Cpsc Certificates</a>
-                        </li>
-                        <li>
-                            <a href="#">Ratings</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop Help</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
+                        {footerLinks.map((Objects, Id) =>(
+                          <li key={Id}>
+                            <a href={Objects.path}>{Objects.text}</a>
+                          </li>  
+                        ))}
                     </ul>
                 </div>
                 <div className="col-C">
                 <h3>SITES</h3>
                     <ul>
-                        <li>
-                            <a href="#">DC</a>
-                        </li>
-                        <li>
-                            <a href="#">MAD Magazine</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Kids</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Universe</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Power Visa</a>
-                        </li>
+                        {dcLinks.map((Objects, Id) => (
+                            <li key={Id}>
+                                <a href={Objects.path}>{Objects.text}</a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
