@@ -1,4 +1,19 @@
+
 export default function Header(){
+    const navigationLinks = [
+        { text: 'CHARACTERS', path: '/characters' },
+        { text: 'COMICS', path: '/comics' },
+        { text: 'MOVIES', path: '/movies' },
+        { text: 'TV', path: '/tv' },
+        { text: 'GAMES', path: '/games' },
+        { text: 'COLLECTIBLES', path: '/collectibles' },
+        { text: 'VIDEOS', path: '/videos' },
+        { text: 'FANS', path: '/fans' },
+        { text: 'NEWS', path: '/news' },
+        { text: 'SHOP', path: '/shop' }
+      ];
+
+
     return(
         <header>
             <div className="container">
@@ -8,36 +23,12 @@ export default function Header(){
                     </div>
                     <div className="col-2">
                         <ul>
-                            <li>
-                                <a href="#">CHARACTERS</a>
-                            </li>
-                            <li>
-                                <a href="#">COMICS</a>
-                            </li>
-                            <li>
-                                <a href="#">MOVIES</a>
-                            </li>
-                            <li>
-                                <a href="#">TV</a>
-                            </li>
-                            <li>
-                                <a href="#">GAMES</a>
-                            </li>
-                            <li>
-                                <a href="#">COLLECTIBLES</a>
-                            </li>
-                            <li>
-                                <a href="#">VIDEOS</a>
-                            </li>
-                            <li>
-                                <a href="#">FANS</a>
-                            </li>
-                            <li>
-                                <a href="#">NEWS</a>
-                            </li>
-                            <li>
-                                <a href="#">SHOP</a>
-                            </li>
+                            {navigationLinks.map((link, id) => (
+                                <li key={id}>
+                                    <a href={link.path}>{link.text}</a>
+                                </li>
+                            ))
+                            }
                         </ul>
                     </div>
                 </div>
