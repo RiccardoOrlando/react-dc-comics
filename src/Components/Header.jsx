@@ -33,6 +33,9 @@ export default function Header(){
                     </div>
                 </div>
             </div>
+            <div className="hero">
+                
+            </div>
         </header>
     )
 }
